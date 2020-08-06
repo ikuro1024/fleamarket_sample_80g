@@ -1,0 +1,11 @@
+.Main {
+  background-color: #ffffff;
+  &__Visual {
+    height: 560px;
+    width: 100%;
+    background-image: url('material/pict/bg-mainVisual-pict_pc.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top, center;
+  }
+}

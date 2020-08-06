@@ -27,7 +27,7 @@ has_one :profile
 |city|string|null: false|
 |address|string|null: false|
 |building|string||
-|user_id|integer|foreign_key|
+|user_id|integer|null: false foreign_key|
 
 ## Association
 belongs_to :user
@@ -38,15 +38,14 @@ belongs_to :user
 |name|string|null: false|
 |price|string|null: false|
 |detail|text|null: false|
-|category_id|integer|foreign_key|
-|bland_id|integer|foreign_key|
-|size_id|integer|foreign_key|
-|user_id|integer|foreign_key|
-|condition_id|integer|foreign_key|
+|condition|enum|null: false|
+|category_id|integer|null: false foreign_key|
+|brand_id|integer|null: false foreign_key|
+|size_id|integer|null: false foreign_key|
+|user_id|integer|null: false foreign_key|
 
 ## Association
 has_many :images
-has_many :condition
 belongs_to :category
 belongs_to :brand
 
@@ -54,7 +53,7 @@ belongs_to :brand
 |Column|Type|Option|
 |------|----|------|
 |url|text|null: false|
-|product_id|integer|foreign_key|
+|product_id|integer|null: false foreign_key|
 
 ## Association
 belongs_to :product
@@ -62,7 +61,7 @@ belongs_to :product
 # cards(クレジットカード) テーブル
 |Column|Type|Option|
 |------|----|------|
-|user_id|integer|null: false|
+|user_id|integer|null: false null: false|
 |token|||
 
 ## Association
@@ -84,14 +83,6 @@ belongs_to :product
 
 ## Association
 belongs_to :user
-belongs_to :product
-
-# conditions(商品状態) テーブル
-|Column|Type|Option|
-|------|----|------|
-|name|string|null: false|
-
-## Association
 belongs_to :product
 
 # categories(大元のカテゴリー) テーブル
@@ -139,8 +130,7 @@ has_many :products
 # brand(ブランド) テーブル
 |Column|Type|Option|
 |------|----|------|
-|name|string||
-|brand_group|integer|foreign_key|
+|name|string|null: false|
 
 ## Association
 has_many :products

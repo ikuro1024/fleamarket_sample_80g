@@ -61,8 +61,9 @@ belongs_to :product
 # cards(クレジットカード) テーブル
 |Column|Type|Option|
 |------|----|------|
-|user_id|integer|null: false null: false|
-|token|||
+|user_id|integer|null: false|
+|customer_id|string|null: false|
+|card_id|string|null: false|
 
 ## Association
 belongs_to :user

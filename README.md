@@ -48,7 +48,7 @@ belongs_to :user
 has_many :images
 belongs_to :category
 belongs_to :brand
-
+belongs_to :size
 # images(商品イメージ) テーブル
 |Column|Type|Option|
 |------|----|------|
@@ -73,7 +73,7 @@ belongs_to :user
 |name|string|null: false|
 
 ## Association
-belongs_to :product
+has_many :products
 
 # orders(注文情報) テーブル
 |Column|Type|Option|

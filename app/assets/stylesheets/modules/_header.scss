@@ -1,0 +1,53 @@
+.Header__container {
+  height: 110px;
+  width: auto;
+  background-color:white;
+  padding: 0 60px;
+  
+}
+
+.Header__container__upper {
+  padding: 15px 0;
+  display: flex;
+  justify-content: space-between;
+  &__logo {
+  }
+}
+
+.Form {
+  &__search{
+    height: 35px;
+
+  }
+  &__submit{
+    height: 30px;
+    width: 30px;
+    background-color: #4cd0cd;
+  }
+}
+
+.Header__container__nav {
+  font-size: 14px;
+  padding-bottom: 15px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  &__dropdown {
+    display: flex;
+    &__category{
+      padding-right: 30px;
+    }
+    &__brand{
+      padding-left: 10px;
+    }
+  }
+  &__user-menu{
+    display: flex;
+    &__left{
+      padding-right: 10px;
+    }
+    &__right{
+      padding-left: 10px;
+    }
+  }
+}

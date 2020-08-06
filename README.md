@@ -85,36 +85,14 @@ belongs_to :product
 belongs_to :user
 belongs_to :product
 
-# categories(大元のカテゴリー) テーブル
+# categories(カテゴリー)テーブル
 |Column|Type|Option|
 |------|----|------|
 |name|string|null: false|
 
 ## Association
 has_many :products
-has_many :category_parents
-has_many :category_childs
-
-# category_parents(親カテゴリー) テーブル
-|Column|Type|Option|
-|------|----|------|
-|name|string|null: false|
-|category_id|integer|foreign_key|
-
-## Association
-belongs_to :category
-has_many :category_childs
-
-# category_childs(子カテゴリー) テーブル
-|Column|Type|Option|
-|------|----|------|
-|name|string|null: false|
-|category_id|integer|foreign_key|
-|category_parent_id|integer|foreign_key|
-
-## Association
-belongs_to :categories
-belongs_to :categories_parent
+has_ancestry
 
 # shippings(発送) テーブル
 |Column|Type|Option|

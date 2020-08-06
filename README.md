@@ -41,13 +41,11 @@ belongs_to :user
 |category_id|integer|foreign_key|
 |bland_id|integer|foreign_key|
 |size_id|integer|foreign_key|
-|state_id|integer|foreign_key|
 |user_id|integer|foreign_key|
 |condition_id|integer|foreign_key|
 
 ## Association
 has_many :images
-has_many :state
 has_many :condition
 belongs_to :category
 belongs_to :brand
@@ -82,19 +80,13 @@ belongs_to :product
 |Column|Type|Option|
 |------|----|------|
 |product_id|integer|foreign_key null:false|
+|user_id|integer|foreign_key null:false|
 
 ## Association
 belongs_to :user
-
-# conditions(商品状態) テーブル
-|Column|Type|Option|
-|------|----|------|
-|name|string|null: false|
-
-## Association
 belongs_to :product
 
-# states テーブル
+# conditions(商品状態) テーブル
 |Column|Type|Option|
 |------|----|------|
 |name|string|null: false|

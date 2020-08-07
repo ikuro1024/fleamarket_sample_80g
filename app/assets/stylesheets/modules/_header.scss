@@ -1,28 +1,37 @@
 .Header__container {
   height: 110px;
-  width: auto;
+  max-width: 1040px;
+  width: 100%;
   background-color:white;
   padding: 0 60px;
-  
 }
 
 .Header__container__upper {
   padding: 15px 0;
   display: flex;
-  justify-content: space-between;
   &__logo {
+    margin-right: 30px;
+  }
+  &__form {
+    width: 100%;
   }
 }
 
 .Form {
+  width: 100%;
+  display: flex;
+  align-items: center;
   &__search{
-    height: 35px;
+    height: 36px;
+    width: calc(100% - 26px);;
+    padding-left: 5px;
 
   }
   &__submit{
-    height: 30px;
-    width: 30px;
+    height: 36px;
+    width: 36px;
     background-color: #4cd0cd;
+    border: none;
   }
 }
 

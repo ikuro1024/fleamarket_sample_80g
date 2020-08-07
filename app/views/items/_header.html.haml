@@ -6,10 +6,15 @@
         %span.image
           = image_tag 'material/logo/logo.png', alt: 'header-logo', height: '40px', class: ''
       .Header__container__upper__form
-       
-        = form_with url: '#' do |form|
-          -# = form.text_field :keyword, placeholder: "投稿を検索する", 
-          = form.submit 
+        -# = form_with(url: '#', method: :get, class: 'Form') do |form|
+        -#   = form.text_field :keyword, placeholder: 'キーワードから探す', class: 'Form__search'
+        -#   = form.submit '', class: 'Form__submit'
+        %form{action: '', method: 'get'}
+          %p.Form
+            %input{type: 'text', placeholder: 'キーワードから探す', name: 'search', class: 'Form__search'}
+            %input{type: 'image', alt:'search', src: 'material/icon/icon-search1.png', class: 'Form__submit'}
+              
+
     .Header__container__nav
       %li.Header__container__nav__dropdown
         %ul.Header__container__nav__dropdown__category
